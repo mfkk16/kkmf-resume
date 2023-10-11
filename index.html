@@ -9,11 +9,11 @@
 </head>
 <script>
     function buttonClick() {
+        console.log("button click");
         try {
             window.addEventListener("flutterInAppWebViewPlatformReady", function (event) {
-                window.flutter_inappwebview.callHandler('FlutterFunction', PrintingString);
+                window.flutter_inappwebview.callHandler('FlutterFunction', "got success message");
                 console.log("success");
-
             });
         } catch (error) {
             console.log(error);
